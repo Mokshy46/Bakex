@@ -1,0 +1,19 @@
+
+import './App.css'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+
+
+function App() {
+
+  return (
+    <>
+      <div className=' hero-bg text-gray-700  font-serif'>
+        <Navbar />
+        <Hero />
+      </div>
+    </>
+  )
+}
+
+export default App
