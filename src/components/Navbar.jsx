@@ -10,8 +10,8 @@ const Navbar = () => {
 
     return (
         <>
-            <div className='shadow-md  hero '>
-                <div className=" md:flex md:justify-between  items-center">
+            <div className='shadow-md '>
+                <div className=" md:flex md:justify-between  items-center ">
                     <div className='flex justify-between '>
                         <a href="#">
                             <span className=' text-4xl '>Foodie</span>
@@ -41,21 +41,20 @@ const Navbar = () => {
 
                     </div>
 
-                    {open && (
-                        <div className=' flex gap-4 m-2  '>
 
-                            {["Home", "Menu", "About Us", "Gallery", "Contact"].map((item) => (
+                    <div className={`md:hidden flex flex-col items-center gap-4 m-2 overflow-hidden transition-all duration-300 ${open ? "max-h-40 py-4" : "max-h-0 py-0"}`}>
 
-                                <a href="#" key={item} className=' hover:text-gray-400'>{item}
-                                </a>
+                        {["Home", "Menu", "About Us", "Gallery", "Contact"].map((item) => (
 
-                            ))}
+                            <a href="#" key={item} className=' hover:text-gray-400'>{item}
+                            </a>
+
+                        ))}
 
 
-                        </div>
-                    )}
+                    </div>
 
-                    <Button className="">Order Now</Button>
+                    <Button className='hidden'>Order Now</Button>
 
 
 
