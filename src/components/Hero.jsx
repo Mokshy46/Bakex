@@ -1,14 +1,9 @@
 import React from 'react'
 import Button from './Button'
-import strawcake from '../assets/pngcake.png'
-import cake5 from '../assets/cake5.png'
 
-import cake3 from '../assets/cake3.png'
 import cake4 from '../assets/cake4.png'
 
-import { useState, useEffect } from 'react'
 
-const images = [strawcake, cake3, cake4, cake5]
 
 
 
@@ -28,7 +23,7 @@ const Hero = () => {
 
     return (
         <div className=' flex flex-col items-center h-screen px-16 hero-bg justify-center py-22'>
-            <div className='mt-7 text-center'>
+            <div className=' text-center'>
                 <span className=' text-6xl '>
                     Savor Every
                     Moment

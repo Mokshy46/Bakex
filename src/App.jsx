@@ -14,25 +14,26 @@ function App() {
   return (
     <>
       <div className=' text-black  font-serif'>
-        <div className='hero-bg' id='home'>
-          <Navbar />
+        <Navbar />
+        
+        <div className='hero-bg scroll-mt-24' id='home'>
           <Hero />
         </div>
 
-        <div className='' id='about'>
+        <div className='scroll-mt-24' id='about'>
           <Feature />
         </div>
 
-        <div id='menu'>
+        <div id='menu' className='scroll-mt-24'>
           <Menu />
           <Items />
         </div>
 
-        <div id='gallery'>
+        <div id='gallery' className='scroll-mt-24'>
           <Gallery />
         </div>
 
-        <div id='contact'>
+        <div id='contact' className='scroll-mt-24'>
           <Contact />
         </div>
 

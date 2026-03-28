@@ -18,10 +18,10 @@ const Navbar = () => {
 
     return (
         <>
-            <div className='shadow-2xl backdrop-blur-md  '>
+            <div className='shadow-2xl sticky top-0 z-50 bg-gradient-to-r from-pink-300 to-yellow-200 backdrop-blur-md '>
                 <div className=" md:flex md:justify-between  items-center ">
                     <div className='flex justify-between '>
-                        <a href="#">
+                        <a href="#home">
                             <span className=' text-4xl '>Foodie</span>
                         </a>
 
@@ -48,7 +48,7 @@ const Navbar = () => {
 
                     </div>
 
-                    <div className={`md:hidden flex flex-col items-center gap-1 m-2 overflow-hidden transition-all duration-300 ${open ? "max-h-40 py-4" : "max-h-0 py-0"}`}>
+                    <div className={`md:hidden flex flex-col items-center gap-1  overflow-hidden transition-all duration-300 ${open ? "max-h-40 py-4" : "max-h-0 py-0"}`}>
 
                         {navLinks.map((item) => (
 
