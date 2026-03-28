@@ -8,54 +8,61 @@ import cake4 from '../assets/cake4.png'
 
 import { useState, useEffect } from 'react'
 
-const images = [ strawcake, cake3, cake4, cake5]
+const images = [strawcake, cake3, cake4, cake5]
 
 
 
 
 const Hero = () => {
 
-    const [current, setCurrent] = useState(0);
+    // const [current, setCurrent] = useState(0);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrent((prev) => (prev + 1) % images.length);
-        }, 3000);
-        return () => clearInterval(interval);
-    }, []);
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         setCurrent((prev) => (prev + 1) % images.length);
+    //     }, 3000);
+    //     return () => clearInterval(interval);
+    // }, []);
 
 
 
     return (
-        <div className=' flex items-center h-screen px-16 justify-between'>
-            <div className=''>
-                <span className=' text-7xl'>
-                    Savor Every <br />
-                    Moment with
+        <div className=' flex flex-col items-center h-screen px-16 hero-bg justify-center py-22'>
+            <div className='mt-7 text-center'>
+                <span className=' text-6xl '>
+                    Savor Every
+                    Moment
                 </span><br />
-                <span className=' text-black  text-7xl'>
+                <span className=' text-black  text-6xl'>
                     Every Bite
                 </span>
 
                 <p className='p-3'>
-                    Experience gourmet dining crafted with passion.
-                </p>
-                <Button className='inline-flex'>Reserve Your Table</Button>
+                    Sourdough, pastries, and more, made from
+                    organic, locally-sourced ingredients. Taste the
+                    difference of slow fermentation.                </p>
+                    
+                <Button href='#contact' className='inline-flex '>Reserve Your Table</Button>
             </div>
 
 
-            <div className="relative  w-152 h-158 ">
-                {images.map((img, index) => (
+            <div className="relative  w-192 h-198 ">
+
+                <img src={cake4} alt="" className='hidden  md:block absolute top-0 left-0 w-252 h-118 object-contain transition-opacity duration-1000 pb-14' />
+                {/* {images.map((img, index) => (
                     <img
                         key={index}
                         src={img}
                         alt=""
-                        className={`absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-1000 ${index === current ? "opacity-100" : "opacity-0"
+                        className={`absolute top-0 left-0 w-222 h-198 object-contain transition-opacity duration-1000 ${index === current ? "opacity-100" : "opacity-0"
                             }`}
                     />
-                ))}
-            </div>
+                ))} */}
+            </div> 
+ 
+
         </div>
+
     )
 }
 

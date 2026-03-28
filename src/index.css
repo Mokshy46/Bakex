@@ -8,6 +8,11 @@
 
 @layer utilities {
   .hero-bg {
-    background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+    background-image: linear-gradient(to top, #FFF886 0%, #F072B6 100%);
+  }
+
+  .feat-bg {
+    background-image: linear-gradient(to top,#fffcdc 0%, #d9a7c7 100%);
+
   }
 }

@@ -8,9 +8,17 @@ const Navbar = () => {
 
     const [open, setOpen] = useState(false);
 
+    const navLinks = [
+        { name: "Home", id: '#home' },
+        { name: "Menu", id: '#menu' },
+        { name: "About Us", id: '#about' },
+        { name: "Gallery", id: ' #gallery' },
+        { name: "Contact", id: '#contact' },
+    ];
+
     return (
         <>
-            <div className='shadow-md '>
+            <div className='shadow-2xl backdrop-blur-md  '>
                 <div className=" md:flex md:justify-between  items-center ">
                     <div className='flex justify-between '>
                         <a href="#">
@@ -31,36 +39,28 @@ const Navbar = () => {
                     {/* Desktop View */}
                     <div className=' md:flex gap-4 hidden  '>
 
-                        {["Home", "Menu", "About Us", "Gallery", "Contact"].map((item) => (
+                        {navLinks.map((item) => (
 
-                            <a href="#" key={item} className=' hover:text-gray-400'>{item}
+                            <a href={item.id} key={item.name} className=' hover:text-gray-400'>{item.name}
                             </a>
 
                         ))}
 
-
                     </div>
 
+                    <div className={`md:hidden flex flex-col items-center gap-1 m-2 overflow-hidden transition-all duration-300 ${open ? "max-h-40 py-4" : "max-h-0 py-0"}`}>
 
-                    <div className={`md:hidden flex flex-col items-center gap-4 m-2 overflow-hidden transition-all duration-300 ${open ? "max-h-40 py-4" : "max-h-0 py-0"}`}>
+                        {navLinks.map((item) => (
 
-                        {["Home", "Menu", "About Us", "Gallery", "Contact"].map((item) => (
-
-                            <a href="#" key={item} className=' hover:text-gray-400'>{item}
+                            <a href={item.id} key={item.name} className=' hover:text-gray-400'>{item.name}
                             </a>
 
                         ))}
-
-
                     </div>
 
-                    <Button className='hidden'>Order Now</Button>
-
-
-
+                    <Button className='hidden' href='#contact'>Order Now</Button>
 
                 </div>
-
 
             </div>
 
